@@ -1,0 +1,57 @@
+:root{--bg:#0b1220;--panel:#111a2c;--text:#f4f7fb;--muted:#a8b2c5;--accent:#55b7ff;--line:#24314a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#08111f,#0d1626);color:var(--text);line-height:1.6;overflow-x:hidden}
+.wrap{width:min(1040px,92%);margin:auto}
+a{color:inherit}
+
+header{padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
+.brand-logo{width:180px;height:auto;display:block}
+nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.95rem}
+nav a:hover{color:var(--text)}
+
+.hero{padding:90px 0 70px}
+.eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+h1{font-size:clamp(2.5rem,7vw,5.3rem);line-height:1.02;margin:.35em 0 .25em;max-width:900px}
+.lead{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--muted);max-width:720px}
+.cta{display:inline-block;margin-top:24px;padding:12px 18px;border:1px solid var(--accent);border-radius:10px;text-decoration:none}
+.cta:hover{background:rgba(85,183,255,.08)}
+
+.section{padding:38px 0 80px}
+h2{font-size:2rem;margin:0 0 24px}
+.card{background:rgba(17,26,44,.86);border:1px solid var(--line);border-radius:18px;padding:28px;min-width:0}
+.app{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center}
+.app-content{min-width:0}
+.app h3{font-size:1.8rem;line-height:1.2;margin:14px 0 10px}
+.app p{margin:0;max-width:720px;overflow-wrap:anywhere}
+.icon{width:120px;height:120px;border-radius:28px;background:radial-gradient(circle,#55b7ff 0 18%,#244a68 19% 35%,#09121e 36% 45%,#55b7ff 46% 48%,#101a2b 49%);border:1px solid #34506f}
+.badge{display:inline-block;padding:4px 9px;border-radius:999px;background:#16263b;color:#9bd4ff;font-size:.8rem}
+.muted{color:var(--muted)}
+.about{padding-top:36px}
+.about .card{padding:28px}
+.about h2{margin-bottom:22px}
+.about p{margin:0;max-width:900px}
+
+footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none;margin-right:18px}
+.footer-links{display:flex;flex-wrap:wrap;gap:4px}
+
+.page{padding:56px 0 80px;max-width:800px}
+.page h1{font-size:clamp(2rem,5vw,3.5rem)}
+.page h2{font-size:1.35rem;margin-top:34px}
+
+@media(max-width:700px){
+  header{padding:22px 0}
+  .brand-logo{width:150px}
+  nav{display:none}
+  .hero{padding:60px 0 50px}
+  .section{padding:30px 0 60px}
+  .app{grid-template-columns:1fr}
+  .icon{width:100px;height:100px}
+  .card{padding:22px}
+  footer .wrap{display:block}
+  .footer-links{margin-top:12px}
+}
